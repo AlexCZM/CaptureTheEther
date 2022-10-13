@@ -34,7 +34,6 @@ module.exports = {
         localhost: {
             url: "http://127.0.0.1:8545/",
             chainId: 31337,
-            //accounts is by default when you run yarn hardhat node
         },
         goerli: {
             url: GOERLI_RPC_URL,
