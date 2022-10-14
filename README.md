@@ -1,16 +1,20 @@
 # [Capture the Ether](https://capturetheether.com/) THE GAME OF ETHEREUM SMART CONTRACT SECURITY
 
-Run the following command to deploy the contract and run the test.
+Run the following command to:
 
 ```
+yarn hardhat deploy --tags x
+```
+
+deploy the contract #
+OR
+
+```
+
 yarn hardhat test --grep "x"
 
 ```
 
-where
+(deploy and) attack the smart contract
 
-```
-x
-```
-
-is the corresponding test
+where `x` is the challenge #
