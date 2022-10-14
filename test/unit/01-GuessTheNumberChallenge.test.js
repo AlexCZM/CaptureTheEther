@@ -1,7 +1,7 @@
 const { assert } = require("chai");
 const { ethers, getNamedAccounts } = require("hardhat");
 
-describe("GuessTheNumberChallenge", function () {
+describe("01-GuessTheNumberChallenge", function () {
     let guessContract, value, player;
     beforeEach(async function () {
         //make a snapshot by calling fixture

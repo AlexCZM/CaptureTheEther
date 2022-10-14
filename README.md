@@ -1,8 +1,16 @@
-# 01 [Guess the number](https://capturetheether.com/challenges/lotteries/guess-the-number/) challenge from CaptureTheEther
+# [Capture the Ether](https://capturetheether.com/) THE GAME OF ETHEREUM SMART CONTRACT SECURITY
 
 Run the following command to deploy the contract and run the test.
 
 ```
-yarn hardhat test
+yarn hardhat test --grep "x"
 
 ```
+
+where
+
+```
+x
+```
+
+is the corresponding test

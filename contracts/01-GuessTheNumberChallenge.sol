@@ -6,7 +6,7 @@ contract GuessTheNumberChallenge {
 
     // in an earlier solidity version the 'constructor' function had the contract name
     // replace it to work with latest version
-    constructor() public payable {
+    constructor() payable {
         require(msg.value == 1 ether);
     }
 
