@@ -14,6 +14,10 @@ describe("03-GuessTheRandomNumberChallenge", function () {
 
     describe("guess", async function () {
         it("Find the 'random' number, empties the contract", async function () {
+            /**I was expecting to recreate the hashed answer by reading the   
+            blockNo and block timestamp at deployment time. But there is no way to find this info 
+            in a programmatically way. 
+            You can go to a block explorer and read this data or to read directly from storage.*/
             const contractAddress = await guessTheRandomNumberContract.address;
             const storageData = await ethers.provider.getStorageAt(contractAddress, 0);
             const randomNo = Number(storageData);
