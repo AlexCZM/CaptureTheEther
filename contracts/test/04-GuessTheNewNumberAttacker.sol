@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import "../04-GuessTheNewNumberChallenge.sol";
+import "../Lotteries/04-GuessTheNewNumberChallenge.sol";
 
 contract GuessTheNewNumberAttacker {
     GuessTheNewNumberChallenge s_targetContract;

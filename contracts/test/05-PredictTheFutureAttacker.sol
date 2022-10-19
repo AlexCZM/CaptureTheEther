@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import "../05-PredictTheFutureChallenge.sol";
+import "../Lotteries/05-PredictTheFutureChallenge.sol";
 
 contract PredictTheFutureAttacker {
     PredictTheFutureChallenge s_targetContract;
