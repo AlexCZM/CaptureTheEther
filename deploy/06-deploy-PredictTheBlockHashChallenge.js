@@ -12,14 +12,6 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
         value: value,
         log: true,
     });
-    console.log("Deploy the attacker contract...");
-    //get contract address
-    const args = [tx.address];
-    await deploy("PredictTheBlockHashAttacker", {
-        from: deployer,
-        args: args,
-        log: true,
-    });
 };
 
 module.exports.tags = ["all", "6", "PredictTheBlockHashChallenge"];

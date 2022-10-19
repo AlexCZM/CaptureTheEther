@@ -13,8 +13,8 @@ describe("06-PredictTheBlockHashChallenge", function () {
             "PredictTheBlockHashChallenge",
             player
         );
-        attacker = await ethers.getContract("PredictTheBlockHashAttacker", player);
-        await attacker.preAttack({ value: value });
+        const zeroHash = ethers.utils.formatBytes32String(""); // this returns 0x00...00
+        await predictTheBlockHashContract.lockInGuess(zeroHash, { value: value });
     });
 
     describe("settle function", async function () {
@@ -25,7 +25,7 @@ describe("06-PredictTheBlockHashChallenge", function () {
             const initialBlockNo = await ethers.provider.getBlockNumber();
             await hre.network.provider.send("hardhat_mine", [blocks]);
             const currentBlockNo = await ethers.provider.getBlockNumber();
-            await attacker.attack();
+            await predictTheBlockHashContract.settle();
             const isComplete = await predictTheBlockHashContract.isComplete();
 
             assert.equal(isComplete === true, currentBlockNo == initialBlockNo + Number(blocks));
