@@ -19,6 +19,7 @@ module.exports = {
     namedAccounts: {
         deployer: 0, // 1st account from  (goerli) accounts list - eg. PRIVATE_KEY
         player: 1,
+        player2: 2,
     },
 
     etherscan: {
