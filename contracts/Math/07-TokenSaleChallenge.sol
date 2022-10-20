@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.17;
+pragma solidity 0.4.22;
+
 import "hardhat/console.sol";
 
 contract TokenSaleChallenge {
     mapping(address => uint256) public balanceOf;
     uint256 constant PRICE_PER_TOKEN = 1 ether;
 
-    constructor() payable {
+    function TokenSaleChallenge() public payable {
         require(msg.value == 1 ether);
     }
 
@@ -15,6 +16,7 @@ contract TokenSaleChallenge {
     }
 
     function buy(uint256 numTokens) public payable {
+        console.log("sc overflow", numTokens * PRICE_PER_TOKEN);
         require(msg.value == numTokens * PRICE_PER_TOKEN);
 
         balanceOf[msg.sender] += numTokens;
@@ -24,6 +26,6 @@ contract TokenSaleChallenge {
         require(balanceOf[msg.sender] >= numTokens);
 
         balanceOf[msg.sender] -= numTokens;
-        payable(msg.sender).transfer(numTokens * PRICE_PER_TOKEN);
+        msg.sender.transfer(numTokens * PRICE_PER_TOKEN);
     }
 }

@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 module.exports = async ({ deployments, getNamedAccounts }) => {
     const deployer = (await getNamedAccounts()).deployer;
     const { deploy, log } = deployments;
-    const value = ethers.utils.parseEther("3");
+    const value = ethers.utils.parseEther("1");
     const attackerValue = ethers.utils.parseEther("20");
     console.log("Deploy PredictTheFutureChallenge(5) contract...");
 
