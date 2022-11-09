@@ -14,4 +14,4 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
     });
 };
 
-module.exports.tags = ["all", "GuessTheNumberChallenge"];
+module.exports.tags = ["all", "1", "GuessTheNumberChallenge"];

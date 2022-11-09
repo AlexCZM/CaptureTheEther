@@ -5,7 +5,7 @@ describe("02-GuessTheNumberChallenge", function () {
     let guessTheSecretNumberContract, value, player;
     beforeEach(async function () {
         //make a snapshot by calling fixture
-        await deployments.fixture("all");
+        await deployments.fixture("2");
         player = (await getNamedAccounts()).player;
         value = ethers.utils.parseEther("1");
         guessTheSecretNumberContract = await ethers.getContract("GuessTheSecretNumberChallenge");
