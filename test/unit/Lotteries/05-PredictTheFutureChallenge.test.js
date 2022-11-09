@@ -45,8 +45,6 @@ describe("05-PredictTheFutureChallenge ", function () {
                     numberFound = await attacker.attack();
                 }
             });
-
-            console.log("after while");
         });
     });
 });

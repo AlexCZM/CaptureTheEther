@@ -5,7 +5,7 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
     const { deploy, log } = deployments;
     const value = ethers.utils.parseEther("1");
     const attackerValue = ethers.utils.parseEther("20");
-    console.log("Deploy PredictTheFutureChallenge(5) contract...");
+    console.log("Deploy PredictTheFutureChallenge contract...");
 
     const tx = await deploy("PredictTheFutureChallenge", {
         from: deployer,
